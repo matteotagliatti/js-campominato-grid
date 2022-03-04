@@ -16,6 +16,7 @@
   --default-border: 2px solid #7b7b7b;
   --default-border2: 2px solid #ffffff;
   --grid-size: 500px;
+  --mobile-grid-size: 350px;
 }
 
 /* Reset */
@@ -180,4 +181,25 @@ footer div {
 footer .inline {
   display: inline;
   margin: 2px;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 800px) {
+  body {
+    height: 100vh;
+  }
+
+  .flex-container {
+    margin: 2rem 0;
+  }
+
+  #grid {
+    width: var(--mobile-grid-size);
+  }
+
+  #grid div {
+    width: calc(var(--mobile-grid-size) / 10);
+    height: calc(var(--mobile-grid-size) / 10);
+  }
 }
