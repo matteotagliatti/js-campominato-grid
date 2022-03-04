@@ -17,9 +17,8 @@ for (let i = 0; i < buttons.length; i++) {
       timerDisplay.innerText = writeTime(time);
     }
     /* Prevent multiple click with more speed timer */
-    if (event.detail === 1) {
-      timer = setInterval(startTimer, 1000); // restart timer
-    }
+    console.log(event);
+    if (time === 0 && event.detail === 1) timer = setInterval(startTimer, 1000); // restart timer
   });
 }
 
