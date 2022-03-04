@@ -15,8 +15,7 @@
 :root {
   --default-border: 2px solid #7b7b7b;
   --default-border2: 2px solid #ffffff;
-  --cell-size: 50px;
-  --grid-size: 10;
+  --grid-size: 500px;
 }
 
 /* Reset */
@@ -110,14 +109,14 @@ body {
 /* Game Board - Grid */
 
 #grid {
-  width: calc(var(--cell-size) * var(--grid-size));
-  height: calc(var(--cell-size) * var(--grid-size));
+  width: var(--grid-size);
   display: flex;
   flex-wrap: wrap;
 }
 
 #grid div {
-  width: var(--cell-size);
+  width: calc(var(--grid-size) / 10);
+  height: calc(var(--grid-size) / 10);
   border-top: var(--default-border2);
   border-right: var(--default-border);
   border-bottom: var(--default-border);
