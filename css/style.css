@@ -15,7 +15,7 @@
 :root {
   --default-border: 2px solid #7b7b7b;
   --default-border2: 2px solid #ffffff;
-  --cell-size: 500px;
+  --cell-size: 50px;
   --grid-size: 10;
 }
 
@@ -43,8 +43,6 @@ body {
 }
 
 .game-board {
-  width: var(--cell-size);
-  height: 500px;
   padding: 3px;
   background-color: #c0c0c0;
 }
@@ -120,7 +118,13 @@ body {
 
 #grid div {
   width: var(--cell-size);
-  height: var(--cell-size);
+  border-top: var(--default-border2);
+  border-right: var(--default-border);
+  border-bottom: var(--default-border);
+  border-left: var(--default-border2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer */
