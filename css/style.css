@@ -106,6 +106,10 @@ body {
   border-left: var(--default-border2);
 }
 
+.game-board .info #reset:hover {
+  cursor: pointer;
+}
+
 /* Game Board - Grid */
 
 #grid {
@@ -124,6 +128,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#grid div:hover {
+  cursor: pointer;
+}
+
+#grid div.bg-blue {
+  background-color: blue;
 }
 
 /* Footer */
