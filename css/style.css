@@ -135,6 +135,7 @@ body {
 }
 
 #grid div.bg-blue {
+  color: white;
   background-color: blue;
 }
 
