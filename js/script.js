@@ -6,7 +6,6 @@ let timer;
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function (event) {
-    console.log(event);
     checkGrid(buttons[i].value);
 
     changeDifficultyDisplay(buttons[i].innerText); // change diffuclty counter
