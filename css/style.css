@@ -1,0 +1,62 @@
+/* Import Font */
+
+@font-face {
+  font-family: "MS Sans Serif";
+  src: url("./micross.ttf");
+}
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d8584;
+}
+
+/* Footer */
+
+footer {
+  height: 36px;
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #bfbfbf;
+}
+
+footer button {
+  height: 30px;
+  width: 100px;
+  font-family: "MS Sans Serif";
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding-left: 0.3rem;
+  font-size: 14px;
+  background-color: #bfbfbf;
+  color: black;
+  border-bottom: 2px solid #7b7b7b;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #7b7b7b;
+}
+
+footer button:hover {
+  background-color: lightgray;
+  color: slategray;
+  cursor: pointer;
+}
+
+footer div {
+  float: left;
+}
+
+footer .inline {
+  display: inline;
+  margin: 2px;
+}
