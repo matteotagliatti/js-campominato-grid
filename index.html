@@ -8,8 +8,32 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main></main>
+    <!-- Main -->
+    <main class="flex-container">
+      <!-- Game Board -->
+      <div class="game-board">
+        <!-- Header -->
+        <div class="header">
+          <div>
+            <img src="images/mine-icon.png" alt="mine icon" />
+            <span>Campominato</span>
+          </div>
+          <img src="images/window-controls.png" alt="window controls" />
+        </div>
+        <!-- Info -->
+        <div class="info">
+          <div class="count" id="difficulty-counter">001</div>
+          <div id="reset">
+            <img src="images/smile-icon.png" alt="smile" />
+          </div>
+          <div class="count" id="timer">000</div>
+        </div>
+        <!-- Grid -->
+        <div id="grid"></div>
+      </div>
+    </main>
 
+    <!-- Footer -->
     <footer>
       <div>
         <img src="images/start.png" />
