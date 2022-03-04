@@ -5,7 +5,8 @@ let time = 0;
 let timer;
 
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function () {
+  buttons[i].addEventListener("click", function (event) {
+    console.log(event);
     checkGrid(buttons[i].value);
 
     changeDifficultyDisplay(buttons[i].innerText); // change diffuclty counter
@@ -16,7 +17,10 @@ for (let i = 0; i < buttons.length; i++) {
       clearInterval(timer);
       timerDisplay.innerText = writeTime(time);
     }
-    timer = setInterval(startTimer, 1000); // restart timer
+    /* Prevent multiple click with more speed timer */
+    if (event.detail === 1) {
+      timer = setInterval(startTimer, 1000); // restart timer
+    }
   });
 }
 
