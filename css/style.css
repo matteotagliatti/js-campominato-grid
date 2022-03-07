@@ -120,8 +120,6 @@ body {
 }
 
 #grid div {
-  width: calc(var(--grid-size) / 10);
-  height: calc(var(--grid-size) / 10);
   border-top: var(--default-border2);
   border-right: var(--default-border);
   border-bottom: var(--default-border);
@@ -138,6 +136,23 @@ body {
 #grid div.bg-blue {
   color: white;
   background-color: blue;
+}
+
+/* Game Board - Grid - Width */
+
+#grid div.easy {
+  width: calc(var(--grid-size) / 10);
+  height: calc(var(--grid-size) / 10);
+}
+
+#grid div.medium {
+  width: calc(var(--grid-size) / 9);
+  height: calc(var(--grid-size) / 9);
+}
+
+#grid div.hard {
+  width: calc(var(--grid-size) / 8);
+  height: calc(var(--grid-size) / 8);
 }
 
 /* Footer */

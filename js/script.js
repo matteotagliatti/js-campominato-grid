@@ -26,6 +26,11 @@ function createCells(cellsNumber) {
 
   for (let i = 0; i < cellsNumber; i++) {
     const cell = document.createElement("div");
+
+    if (cellsNumber == 100) cell.classList.add("easy");
+    if (cellsNumber == 81) cell.classList.add("medium");
+    if (cellsNumber == 48) cell.classList.add("hard");
+
     cell.addEventListener("click", bgBlue);
     cell.innerHTML = `${[i + 1]}`;
     grid.appendChild(cell);
