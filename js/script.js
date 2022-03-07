@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll("button");
 
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function (event) {
+  buttons[i].addEventListener("click", function () {
     createCells(buttons[i].value);
 
     /* EXTRA */
