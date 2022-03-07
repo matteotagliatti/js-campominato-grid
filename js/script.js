@@ -5,7 +5,7 @@ let time = 0;
 let timer;
 
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function (event) {
+  buttons[i].addEventListener("click", function () {
     createCells(buttons[i].value);
 
     /* EXTRA */
@@ -18,13 +18,13 @@ for (let i = 0; i < buttons.length; i++) {
 
 /**
  * Create all the cells
- * @param {*} value
+ * @param {*} cellsNumber
  */
-function createCells(value) {
+function createCells(cellsNumber) {
   const grid = document.getElementById("grid");
-  grid.innerHTML = "";
+  grid.innerHTML = ""; // remove all elements before create new cells
 
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < cellsNumber; i++) {
     const cell = document.createElement("div");
     cell.addEventListener("click", bgBlue);
     cell.innerHTML = `${[i + 1]}`;
