@@ -1,8 +1,4 @@
 const buttons = document.querySelectorAll("button");
-const reset = document.getElementById("reset");
-const timerDisplay = document.getElementById("timer");
-let time = 0;
-let timer;
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function (event) {
@@ -46,8 +42,8 @@ function bgBlue(event) {
   cell.classList.toggle("bg-blue");
 }
 
-/**** FUNCTIONS - EXTRA ****/
-/**** FUNCTIONS - DIFFICULTY ****/
+/**** EXTRA ****/
+/*** DIFFICULTY ***/
 
 /**
  * Change diffuclity display counter
@@ -60,10 +56,13 @@ function changeDifficultyDisplay(button) {
   if (button == "Hard") difficultyDisplay.innerText = "003";
 }
 
-/**** FUNCTIONS - TIME ****/
+/*** TIME ***/
+
+const timerDisplay = document.getElementById("timer");
+let time = 0;
+let timer;
 
 function changeTimerDisplay(event) {
-  console.log(event);
   // if time is on reset time number and timer
   if (time > 0) {
     time = 0;
@@ -92,6 +91,10 @@ function writeTime(time) {
   if (time < 100) return `0${time}`;
   if (time >= 100) return `${time}`;
 }
+
+/*** RELOAD ***/
+
+const reset = document.getElementById("reset");
 
 // Reload the page
 reset.addEventListener("click", () => {
