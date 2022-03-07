@@ -5,12 +5,12 @@ let time = 0;
 let timer;
 
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function () {
+  buttons[i].addEventListener("click", function (event) {
     createCells(buttons[i].value);
 
     /* EXTRA */
     changeDifficultyDisplay(buttons[i].innerText); // change diffuclty counter
-    changeTimerDisplay(); // change timer display
+    changeTimerDisplay(event); // change timer display
   });
 }
 
@@ -62,7 +62,8 @@ function changeDifficultyDisplay(button) {
 
 /**** FUNCTIONS - TIME ****/
 
-function changeTimerDisplay() {
+function changeTimerDisplay(event) {
+  console.log(event);
   // if time is on reset time number and timer
   if (time > 0) {
     time = 0;

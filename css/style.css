@@ -138,7 +138,7 @@ body {
   background-color: blue;
 }
 
-/* Game Board - Grid - Width */
+/* Game Board - Grid - Width/Height */
 
 #grid div.easy {
   width: calc(var(--grid-size) / 10);
