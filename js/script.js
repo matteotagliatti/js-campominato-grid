@@ -21,7 +21,8 @@ for (let i = 0; i < buttons.length; i++) {
  * @param {*} value
  */
 function createCells(value) {
-  document.getElementById("grid").innerHTML = "";
+  const grid = document.getElementById("grid");
+  grid.innerHTML = "";
 
   for (let i = 0; i < value; i++) {
     const cell = document.createElement("div");
