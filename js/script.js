@@ -6,7 +6,7 @@ let timer;
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function (event) {
-    checkGrid(buttons[i].value);
+    createCells(buttons[i].value);
 
     changeDifficultyDisplay(buttons[i].innerText); // change diffuclty counter
 
@@ -28,27 +28,12 @@ reset.addEventListener("click", () => {
 });
 
 /**
- * Check if grid is empty or not
- * @param {*} value // stored in the html tag button, value attribute
- */
-function checkGrid(value) {
-  const gridInner = document.querySelectorAll("#grid > div");
-  const grid = document.getElementById("grid");
-
-  /* Check if the grid is empty. Then create grid cells */
-  if (gridInner.length === 0) {
-    createCells(value);
-  } else {
-    grid.innerHTML = "";
-    createCells(value);
-  }
-}
-
-/**
  * Create all the cells
  * @param {*} value
  */
 function createCells(value) {
+  document.getElementById("grid").innerHTML = "";
+
   for (let i = 0; i < value; i++) {
     const cell = document.createElement("div");
     cell.addEventListener("click", bgBlue);
