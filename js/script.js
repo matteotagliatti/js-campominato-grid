@@ -25,7 +25,7 @@ function createCells(cellsNumber) {
 
     if (cellsNumber == 100) cell.classList.add("easy");
     if (cellsNumber == 81) cell.classList.add("medium");
-    if (cellsNumber == 48) cell.classList.add("hard");
+    if (cellsNumber == 49) cell.classList.add("hard");
 
     cell.addEventListener("click", bgBlue);
     cell.innerHTML = `${[i + 1]}`;

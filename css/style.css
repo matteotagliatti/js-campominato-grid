@@ -151,8 +151,8 @@ body {
 }
 
 #grid div.hard {
-  width: calc(var(--grid-size) / 8);
-  height: calc(var(--grid-size) / 8);
+  width: calc(var(--grid-size) / 7);
+  height: calc(var(--grid-size) / 7);
 }
 
 /* Footer */
