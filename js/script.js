@@ -6,7 +6,6 @@ for (let i = 0; i < buttons.length; i++) {
 
     /* EXTRA */
     changeDifficultyDisplay(buttons[i].innerText); // change diffuclty counter
-    changeTimerDisplay(event); // change timer display
   });
 }
 
@@ -54,42 +53,6 @@ function changeDifficultyDisplay(button) {
   if (button == "Easy") difficultyDisplay.innerText = "001";
   if (button == "Medium") difficultyDisplay.innerText = "002";
   if (button == "Hard") difficultyDisplay.innerText = "003";
-}
-
-/*** TIME ***/
-
-const timerDisplay = document.getElementById("timer");
-let time = 0;
-let timer;
-
-function changeTimerDisplay(event) {
-  // if time is on reset time number and timer
-  if (time > 0) {
-    time = 0;
-    clearInterval(timer);
-    timerDisplay.innerText = writeTime(time);
-  }
-  /* Prevent multiple click with more speed timer */
-  if (time === 0 && event.detail === 1) timer = setInterval(startTimer, 1000); // restart timer
-}
-
-/**
- * Start the timer
- */
-function startTimer() {
-  time++;
-  timerDisplay.innerText = writeTime(time);
-}
-
-/**
- * Display time in the correct way
- * @param {*} value
- * @returns // time
- */
-function writeTime(time) {
-  if (time < 10) return `00${time}`;
-  if (time < 100) return `0${time}`;
-  if (time >= 100) return `${time}`;
 }
 
 /*** RELOAD ***/
